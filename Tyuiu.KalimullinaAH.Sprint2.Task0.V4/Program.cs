@@ -32,13 +32,13 @@ namespace Tyuiu.KalimullinaAH.Sprint2.Task0.V4
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("X="+x);
+            Console.WriteLine("X=" + x);
             Console.WriteLine("Y=" + y);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            for (int i=0; i<6;i++)
+            for (int i = 0; i < 6; i++)
             {
                 Console.WriteLine(res[i]);
             }
