@@ -40,7 +40,7 @@ namespace Tyuiu.KalimullinaAH.Sprint2.Task4.V11
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
             double res = ds.Calculate(x, y);
-            Console.WriteLine(Math.Round(res,3));
+            Console.WriteLine("Значение функции = " +res);
 
             Console.ReadKey();
 
