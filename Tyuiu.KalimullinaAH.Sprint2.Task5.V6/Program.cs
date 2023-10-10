@@ -36,16 +36,25 @@ namespace Tyuiu.KalimullinaAH.Sprint2.Task5.V6
             Console.WriteLine("***************************************************************************");
 
             Console.Write("Введите номер масти: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            int m = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите номер достоинства карты: ");
             int k = Convert.ToInt32(Console.ReadLine());
 
+            string res ;
+            if ((m < 1) || (m > 4) && (k < 6)|| (k > 14))
+            {
+                res = "Введен неверный номер масти или номер достоинства карты!";
+            }
+            else
+            {
+                res = " Название карты = " +  ds.FindCardNameAndValue(m, k);
 
+            }
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            string res = ds.FindCardNameAndValue(n, k);
-            Console.WriteLine(" Название карты = " + res);
+            Console.WriteLine(res);
+
 
             Console.ReadKey();
         }
