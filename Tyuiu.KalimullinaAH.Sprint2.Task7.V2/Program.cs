@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.KalimullinaAH.Sprint2.Task6.V12.Lib;
-namespace Tyuiu.KalimullinaAH.Sprint2.Task6.V12
+using Tyuiu.KalimullinaAH.Sprint2.Task7.V2.Lib;
+namespace Tyuiu.KalimullinaAH.Sprint2.Task7.V2
 {
     class Program
     {
@@ -14,37 +14,40 @@ namespace Tyuiu.KalimullinaAH.Sprint2.Task6.V12
             Console.Title = "Спринт #2 | Выполнила: Калимуллина А.Х | ИИПБ-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #2                                                               *");
-            Console.WriteLine("* Тема: Оператор switch                                                   *");
-            Console.WriteLine("* Задание #6                                                              *");
-            Console.WriteLine("* Вариант #12                                                              *");
+            Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                 *");
+            Console.WriteLine("* Задание #7                                                              *");
+            Console.WriteLine("* Вариант #2                                                              *");
             Console.WriteLine("* Выполнила: Калимуллина Алина Халимовна | ИИПБ-23-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу, которая использует оператор switch вычисляет        *");
             Console.WriteLine("* требуемое значение и возвращает результат.                              *");
-            Console.WriteLine("* Условие: Дата некоторого дня характеризуется тремя натуральными         *");
-            Console.WriteLine("* числами: g (год), m (порядковый номер месяца) и n (число). По заданным  *");
-            Console.WriteLine("* g, n и m определить дату предыдущего дня. Заданный год является         *");
-            Console.WriteLine("* високосным.                                                             *"); 
-
+            Console.WriteLine("* Написать программу на C#, которая запрашивает исходные данные           *");
+            Console.WriteLine("* (вещественные значения) и вычисляет, находится ли точка с координатами  *");
+            Console.WriteLine("* X,Y в заштрихованной области.                                           *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.Write("Введите день: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите значение переменной X: ");
+            double x = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Введите номер месяца: ");
-            int m = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Введите год: ");
-            int g = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите значение переменной Y: ");
+            double y = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Предыдущая дата: " + ds.FindDateOfPreviousDay(g, m, n));
+            bool res = ds.CheckDotInShadedArea(x, y);
+            if (res)
+            {
+                Console.WriteLine("Точка находится в заштрихованной области");
+            }
+            else
+            {
+                Console.WriteLine("Точка не находится в заштрихованной области");
+            }
 
             Console.ReadKey();
         }
